@@ -1510,29 +1510,35 @@ function draw() {
   text(mole,322,249);
 }
 
+//State machine + conditions
 function keyPressed()
 {
+  //If press 1, change emotion to happy
   if (key == "1")
   {
     print("Change to stateHappy");
     state = stateHappy;
   }
+  //If 2, change emotion to sad
   else if (key == "2")
   {
     state = stateSad;
     print("Change to stateSad");
   }
+  //If 3, change emotion to sad
   else if (key == "3")
   {
     print("Change to stateNeutral");
     state = stateNeutral;
   }
+  //If 4, add a border
   else if (key == "4")
   {
     print("Change to borders");
     state = stateBorder;
   }
 
+  //Draw flowers/border based on state
   flowers();
 }
 
